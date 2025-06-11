@@ -188,7 +188,7 @@ def downsampler(signal, packet_s, upsampler_f):
     return symbols
 
 
-def demapper(symbols_I, symbols_Q, packetSize, threshold = 3.0):
+def demapper(symbols_I, symbols_Q, packetSize, threshold = 0.7):
     """Generates an array of bits using the values based on the 16QAM indexing vector.
        - If the symbol amplitude is between 0 and the threshold, it corresponds to the bits 10, if it's greater than the threshold, it corresponds to the sequence 11.
        - If the symbol amplitude is between 0 and -threshold, it corresponds to the bits 01, if it's lower than -threshold, it corresponds to the sequence 00.
@@ -203,7 +203,7 @@ def demapper(symbols_I, symbols_Q, packetSize, threshold = 3.0):
     packetSize : int
         Number of bits in the transmitted packet.
     threshold : float, optional
-        The limit between two symbols in the 16QAM constellation. The default value is 3.
+        The limit between two symbols in the 16QAM constellation. The default value is 0.7.
 
     Returns
     -------

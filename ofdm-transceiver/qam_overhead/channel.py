@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 
-def AWGN(sig, SNR, K):
+def add_awgn(sig, SNR, K):
     """Adds noise to the signal based on the proposed SNR.
 
     Parameters
@@ -22,4 +22,4 @@ def AWGN(sig, SNR, K):
     N0 = P / gamma
     n = np.sqrt(N0 / 2) * np.random.standard_normal(len(sig))
     sig_n = sig + n
-    return sig_n
+    return sig_n, n
