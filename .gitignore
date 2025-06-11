@@ -2,3 +2,7 @@ limesdr-fm-test/venv
 limesdr-fm-test/fm_iq.bin
 limesdr-fm-test/fm_audio.wav
 ofdm-transceiver/venv
+ofdm-transceiver/__pycache__
+ofdm-transceiver/qam_overhead/__pycache__
+rf-sig-classification/torchsig
+rf-sig-classification/venv
